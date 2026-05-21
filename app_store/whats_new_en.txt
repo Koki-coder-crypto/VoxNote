@@ -1,0 +1,7 @@
+Welcome to VoxNote 1.0!
+
+• Record voice memos with one tap
+• Automatic on-device transcription
+• AI-generated summary, key points, and action items
+• Searchable memo library with audio playback
+• Share and export transcripts instantly

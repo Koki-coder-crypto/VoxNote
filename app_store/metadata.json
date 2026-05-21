@@ -1,0 +1,128 @@
+{
+  "app_info": {
+    "name": "VoxNote - AI Voice Transcription",
+    "subtitle": "Record. Transcribe. Summarize.",
+    "bundle_id": "com.voxnote.app",
+    "sku": "VOXNOTE001",
+    "primary_language": "en-US",
+    "primary_category": "Utilities",
+    "secondary_category": "Productivity",
+    "content_rights": {
+      "third_party_content": false,
+      "description": ""
+    },
+    "age_rating": {
+      "rating": "4+",
+      "unrestricted_web_access": false,
+      "gambling": false,
+      "contests": false,
+      "mature_or_suggestive_themes": "NONE",
+      "horror_fear_themes": "NONE",
+      "medical_treatment_info": "NONE",
+      "alcohol_tobacco_or_drug_use": "NONE",
+      "simulated_gambling": "NONE",
+      "sexual_content_or_nudity": "NONE",
+      "graphic_violence": "NONE",
+      "realistic_violence": "NONE",
+      "cartoon_fantasy_violence": "NONE"
+    }
+  },
+  "version_info": {
+    "version": "1.0.0",
+    "build": "1",
+    "copyright": "2026 Koki. All rights reserved."
+  },
+  "app_store_info": {
+    "promotional_text": "Turn any meeting, lecture, or idea into structured notes in seconds — powered by AI. 🎙️",
+    "support_url": "https://github.com/Koki-coder-crypto/LynQ_backend/issues",
+    "marketing_url": "https://github.com/Koki-coder-crypto/LynQ_backend",
+    "privacy_policy_url": "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"
+  },
+  "review_info": {
+    "first_name": "Koki",
+    "last_name": "Developer",
+    "phone_number": "",
+    "email": "kouki_1203@icloud.com",
+    "demo_account_required": false,
+    "notes": "app_store/review_notes.txt"
+  },
+  "localizations": {
+    "en-US": {
+      "name": "VoxNote - AI Voice Transcription",
+      "subtitle": "Record. Transcribe. Summarize.",
+      "keywords": "voice memo,transcription,voice recorder,ai notes,speech to text,meeting notes,dictation,audio recorder",
+      "description_file": "description_en.txt",
+      "whats_new_file": "whats_new_en.txt"
+    },
+    "ja": {
+      "name": "VoxNote - AI音声文字起こし",
+      "subtitle": "録音・文字起こし・AI要約",
+      "keywords": "音声メモ,文字起こし,ボイスレコーダー,AIノート,議事録,授業録音,音声認識,ディクテーション",
+      "description_file": "description_ja.txt",
+      "whats_new_file": "whats_new_ja.txt"
+    }
+  },
+  "iap_products": [
+    {
+      "product_id": "com.voxnote.app.pro.monthly",
+      "type": "auto_renewable_subscription",
+      "reference_name": "VoxNote Pro Monthly",
+      "price_tier": "Tier 4",
+      "price_usd": 3.99,
+      "price_jpy": 600,
+      "subscription_group": "VoxNote Pro",
+      "subscription_duration": "1 Month",
+      "free_trial": "3 Days",
+      "localizations": {
+        "en-US": { "display_name": "VoxNote Pro Monthly", "description": "Unlimited transcriptions and AI summaries, billed monthly." },
+        "ja":    { "display_name": "VoxNote Pro 月額プラン", "description": "無制限の文字起こしとAI要約。月額課金。" }
+      }
+    },
+    {
+      "product_id": "com.voxnote.app.pro.annual",
+      "type": "auto_renewable_subscription",
+      "reference_name": "VoxNote Pro Annual",
+      "price_tier": "Tier 13",
+      "price_usd": 24.99,
+      "price_jpy": 3600,
+      "subscription_group": "VoxNote Pro",
+      "subscription_duration": "1 Year",
+      "free_trial": "7 Days",
+      "localizations": {
+        "en-US": { "display_name": "VoxNote Pro Annual", "description": "Unlimited transcriptions and AI summaries — save 48% vs. monthly." },
+        "ja":    { "display_name": "VoxNote Pro 年額プラン", "description": "無制限の文字起こしとAI要約。月額より48%お得。" }
+      }
+    },
+    {
+      "product_id": "com.voxnote.app.lifetime",
+      "type": "non_consumable",
+      "reference_name": "VoxNote Lifetime",
+      "price_tier": "Tier 20",
+      "price_usd": 29.99,
+      "price_jpy": 4500,
+      "localizations": {
+        "en-US": { "display_name": "VoxNote Lifetime", "description": "Pay once and unlock VoxNote Pro forever — no recurring fees." },
+        "ja":    { "display_name": "VoxNote 買い切りプラン", "description": "一度の購入でVoxNote Proを永久に利用できます。" }
+      }
+    }
+  ],
+  "devices": {
+    "iphone": true,
+    "ipad": true,
+    "mac_catalyst": false,
+    "apple_watch": false,
+    "apple_tv": false
+  },
+  "capabilities": [
+    "Microphone",
+    "Speech Recognition",
+    "In-App Purchase"
+  ],
+  "entitlements": {
+    "in_app_purchases": true,
+    "push_notifications": false,
+    "app_groups": false,
+    "icloud": false
+  },
+  "minimum_os_version": "17.0"
+}

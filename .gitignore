@@ -1,0 +1,26 @@
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# Secrets
+*.p8
+AuthKey_*.p8
+secrets/
+
+# macOS
+.DS_Store

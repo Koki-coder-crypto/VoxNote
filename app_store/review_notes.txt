@@ -1,0 +1,35 @@
+App Review Notes — VoxNote 1.0
+
+Dear App Review Team,
+
+Thank you for reviewing VoxNote.
+
+WHAT THE APP DOES:
+VoxNote is a voice memo and transcription utility that records audio, transcribes it using Apple's on-device Speech framework, and provides AI-generated summaries, key points, and action items.
+
+HOW TO TEST:
+1. Open the app — the Record tab is shown by default.
+2. Grant microphone and speech recognition permissions when prompted.
+3. Tap the purple circle button to start recording. Speak a few sentences (e.g., "I need to buy groceries. Pick up milk, eggs, and bread. Also call the dentist tomorrow.").
+4. Tap the stop button (square icon) to end the recording.
+5. The app will transcribe the audio (on-device) and then call the AI API to generate a summary, key points, and action items. This takes 5-10 seconds.
+6. The completed memo appears in the Memos tab. Tap it to view the transcript and AI analysis.
+7. The Settings tab shows subscription status and app info.
+
+AI FEATURE NOTE:
+The AI summary feature (Claude API) requires a valid ANTHROPIC_API_KEY set in the app's build configuration. For the review build, a test key will be embedded. If the API call fails, the app gracefully falls back and shows the raw transcript without a summary.
+
+IN-APP PURCHASES:
+- com.voxnote.app.pro.monthly  ($3.99/month, 3-day trial)
+- com.voxnote.app.pro.annual   ($24.99/year, 7-day trial)
+- com.voxnote.app.lifetime     ($29.99 one-time)
+
+These are configured in App Store Connect. The free tier allows 10 transcriptions/month up to 5 minutes each. Pro removes all limits.
+
+PRIVACY:
+- Audio is processed entirely on-device by Apple Speech framework.
+- Only anonymized text (transcript) is sent to the Claude API for summarization over HTTPS.
+- No personal data is collected or stored on external servers.
+- No analytics or advertising SDKs are used.
+
+Contact: kouki_1203@icloud.com
