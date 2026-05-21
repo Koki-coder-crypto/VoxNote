@@ -1,6 +1,6 @@
 import Foundation
 
-struct Memo: Identifiable, Codable {
+struct Memo: Identifiable, Codable, Hashable {
     let id: UUID
     var title: String
     let createdAt: Date
