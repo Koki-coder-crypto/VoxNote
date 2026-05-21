@@ -1,4 +1,5 @@
-app_identifier("com.voxnote.app")
+app_identifier("com.kokicoder.voxnote")
 apple_id("kouki_1203@icloud.com")
 itc_team_id(ENV["ITC_TEAM_ID"])
 team_id(ENV["DEVELOPMENT_TEAM"])
+

@@ -7,7 +7,7 @@
     <key>CFBundleDisplayName</key>
     <string>VoxNote</string>
     <key>CFBundleIdentifier</key>
-    <string>com.voxnote.app</string>
+    <string>com.kokicoder.voxnote</string>
     <key>CFBundleVersion</key>
     <string>1</string>
     <key>CFBundleShortVersionString</key>
@@ -42,3 +42,4 @@
     <string></string>
 </dict>
 </plist>
+

@@ -2,7 +2,7 @@
   "app_info": {
     "name": "VoxNote - AI Voice Transcription",
     "subtitle": "Record. Transcribe. Summarize.",
-    "bundle_id": "com.voxnote.app",
+    "bundle_id": "com.kokicoder.voxnote",
     "sku": "VOXNOTE001",
     "primary_language": "en-US",
     "primary_category": "Utilities",
@@ -64,7 +64,7 @@
   },
   "iap_products": [
     {
-      "product_id": "com.voxnote.app.pro.monthly",
+      "product_id": "com.kokicoder.voxnote.pro.monthly",
       "type": "auto_renewable_subscription",
       "reference_name": "VoxNote Pro Monthly",
       "price_tier": "Tier 4",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "product_id": "com.voxnote.app.pro.annual",
+      "product_id": "com.kokicoder.voxnote.pro.annual",
       "type": "auto_renewable_subscription",
       "reference_name": "VoxNote Pro Annual",
       "price_tier": "Tier 13",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "product_id": "com.voxnote.app.lifetime",
+      "product_id": "com.kokicoder.voxnote.lifetime",
       "type": "non_consumable",
       "reference_name": "VoxNote Lifetime",
       "price_tier": "Tier 20",
@@ -126,3 +126,4 @@
   },
   "minimum_os_version": "17.0"
 }
+
