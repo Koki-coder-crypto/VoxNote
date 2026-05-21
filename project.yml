@@ -32,15 +32,9 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         TARGETED_DEVICE_FAMILY: "1,2"
         SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
-    entitlements:
-      path: ios_app/VoxNote.entitlements
-      properties:
-        com.apple.developer.in-app-payments:
-          - com.kokicoder.voxnote.pro.monthly
-          - com.kokicoder.voxnote.pro.annual
-          - com.kokicoder.voxnote.lifetime
     capabilities:
       - microphone
       - speech-recognition
       - in-app-purchase
+
 
