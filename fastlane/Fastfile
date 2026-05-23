@@ -36,7 +36,7 @@ platform :ios do
     deliver(
       api_key:                  api_key,
       ipa:                      "./build/VoxNote.ipa",
-      app_identifier:           "com.voxnote.app",
+      app_identifier:           "com.kokicoder.voxnote",
       name:                     "VoxNote - AI Voice Transcription",
       description:              {
         "en-US" => File.read("app_store/description_en.txt"),

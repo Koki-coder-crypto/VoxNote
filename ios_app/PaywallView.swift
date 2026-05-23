@@ -4,7 +4,7 @@ import StoreKit
 struct PaywallView: View {
     @EnvironmentObject var store: StoreManager
     @Environment(\.dismiss) private var dismiss
-    @State private var selectedPlan: String = "com.voxnote.app.pro.annual"
+    @State private var selectedPlan: String = "com.kokicoder.voxnote.pro.annual"
     @State private var isPurchasing = false
     @State private var errorMessage: String?
     @State private var appeared = false
