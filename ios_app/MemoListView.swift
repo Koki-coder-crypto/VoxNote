@@ -15,78 +15,103 @@ struct MemoListView: View {
 
     var body: some View {
         NavigationStack {
-            Group {
+            ZStack {
+                Color.appBG.ignoresSafeArea()
+
                 if filtered.isEmpty {
-                    ContentUnavailableView(
-                        searchText.isEmpty ? "No Memos Yet" : "No Results",
-                        systemImage: "waveform.slash",
-                        description: Text(searchText.isEmpty
-                            ? "Your recorded memos will appear here."
-                            : "Try a different search term.")
-                    )
+                    emptyState
                 } else {
                     List {
                         ForEach(filtered) { memo in
-                            MemoRow(memo: memo)
+                            MemoCard(memo: memo)
                                 .contentShape(Rectangle())
                                 .onTapGesture { selectedMemo = memo }
+                                .listRowBackground(Color.clear)
+                                .listRowInsets(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
+                                .listRowSeparator(.hidden)
+                                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                    Button(role: .destructive) {
+                                        if let i = memoStore.memos.firstIndex(where: { $0.id == memo.id }) {
+                                            memoStore.delete(at: IndexSet(integer: i))
+                                        }
+                                    } label: { Label("Delete", systemImage: "trash.fill") }
+                                }
                         }
-                        .onDelete { memoStore.delete(at: $0) }
                     }
-                    .listStyle(.insetGrouped)
+                    .listStyle(.plain)
+                    .scrollContentBackground(.hidden)
+                    .background(Color.appBG)
                 }
             }
             .navigationTitle("Memos")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbarBackground(Color.appBG, for: .navigationBar)
             .searchable(text: $searchText, prompt: "Search memos")
-            .navigationDestination(item: $selectedMemo) { memo in
-                MemoDetailView(memo: memo)
+            .navigationDestination(item: $selectedMemo) { MemoDetailView(memo: $0) }
+        }
+    }
+
+    private var emptyState: some View {
+        VStack(spacing: 18) {
+            ZStack {
+                Circle().fill(Color.appAccent.opacity(0.08)).frame(width: 100, height: 100)
+                Image(systemName: "waveform.slash").font(.system(size: 40)).foregroundStyle(Color.appMuted)
+            }
+            VStack(spacing: 8) {
+                Text("No Memos Yet").font(.system(size: 20, weight: .bold)).foregroundStyle(.white)
+                Text("Your recorded memos will appear here.")
+                    .font(.system(size: 15)).foregroundStyle(Color.appMuted).multilineTextAlignment(.center)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
-struct MemoRow: View {
+struct MemoCard: View {
     let memo: Memo
 
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
-                Circle()
-                    .fill(Color.purple.opacity(0.12))
-                    .frame(width: 44, height: 44)
+                RoundedRectangle(cornerRadius: 12)
+                    .fill(Color.appAccent.opacity(0.12))
+                    .frame(width: 46, height: 46)
                 Image(systemName: "waveform")
-                    .foregroundStyle(.purple)
+                    .font(.system(size: 18, weight: .semibold))
+                    .foregroundStyle(Color.appAccent)
             }
-
             VStack(alignment: .leading, spacing: 4) {
                 Text(memo.title)
-                    .font(.subheadline.bold())
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundStyle(.white)
                     .lineLimit(1)
-
                 if let summary = memo.summary, !summary.isEmpty {
                     Text(summary)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .font(.system(size: 12))
+                        .foregroundStyle(Color.appMuted)
                         .lineLimit(2)
                 } else if !memo.transcript.isEmpty {
                     Text(memo.transcript)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .font(.system(size: 12))
+                        .foregroundStyle(Color.appMuted)
                         .lineLimit(2)
                 }
             }
-
             Spacer()
-
             VStack(alignment: .trailing, spacing: 4) {
                 Text(memo.formattedDuration)
-                    .font(.caption.monospacedDigit())
-                    .foregroundStyle(.secondary)
+                    .font(.system(size: 12).monospacedDigit())
+                    .foregroundStyle(Color.appMuted)
                 Text(memo.createdAt, style: .relative)
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
+                    .font(.system(size: 11))
+                    .foregroundStyle(Color.appMuted.opacity(0.6))
             }
         }
-        .padding(.vertical, 4)
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.appSurface)
+                .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.appBorder, lineWidth: 1))
+        )
     }
 }
