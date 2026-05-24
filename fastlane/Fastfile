@@ -37,7 +37,7 @@ platform :ios do
       api_key:                  api_key,
       ipa:                      "./build/VoxNote.ipa",
       app_identifier:           "com.kokicoder.voxnote",
-      name:                     "VoxNote - AI Voice Transcription",
+      name:                     {"en-US" => "VoxNote - AI Voice Transcription", "ja" => "VoxNote - AI音声文字起こし"},
       description:              {
         "en-US" => File.read("../app_store/description_en.txt"),
         "ja"    => File.read("../app_store/description_ja.txt")
@@ -89,7 +89,7 @@ platform :ios do
     deliver(
       api_key:               api_key,
       app_identifier:        "com.kokicoder.voxnote",
-      name:                  "VoxNote - AI Voice Transcription",
+      name:                  {"en-US" => "VoxNote - AI Voice Transcription", "ja" => "VoxNote - AI音声文字起こし"},
       description: {
         "en-US" => File.read("../app_store/description_en.txt"),
         "ja"    => File.read("../app_store/description_ja.txt")
