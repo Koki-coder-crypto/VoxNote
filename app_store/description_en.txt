@@ -1,46 +1,46 @@
-VoxNote turns your voice into structured, intelligent notes — instantly.
+VoxNote turns your voice into structured, intelligent notes instantly.
 
 Whether it's a meeting, a lecture, an idea at 2am, or a quick reminder, VoxNote records, transcribes, and summarizes everything automatically using on-device speech recognition and AI.
 
-── WHAT VOXNOTE DOES ──
+WHAT VOXNOTE DOES
 
-🎙️ RECORD
+RECORD
 Tap once to record. Pause, resume, or cancel at any time. No limits on the number of recordings.
 
-📝 TRANSCRIBE
-Powered by Apple's on-device speech recognition engine, VoxNote converts your audio to accurate text — no audio ever leaves your device.
+TRANSCRIBE
+Powered by Apple's on-device speech recognition engine, VoxNote converts your audio to accurate text - no audio ever leaves your device.
 
-✨ AI SUMMARY
+AI SUMMARY
 After every recording, AI automatically generates:
-• A clear, concise summary
-• Key points extracted from the conversation
-• Action items ready to act on
+- A clear, concise summary
+- Key points extracted from the conversation
+- Action items ready to act on
 
-📂 ORGANIZE
+ORGANIZE
 Browse all your memos with search. Every memo includes the original audio so you can replay it anytime.
 
-↗️ EXPORT
-Share transcripts and summaries via the system share sheet — copy to Notes, send via Messages, or export as text.
+EXPORT
+Share transcripts and summaries via the system share sheet - copy to Notes, send via Messages, or export as text.
 
-── VOXNOTE PRO ──
+VOXNOTE PRO
 
 Free plan: 10 transcriptions/month, up to 5 minutes per recording.
 
 Upgrade to Pro for:
-• Unlimited transcriptions
-• Up to 60-minute recordings
-• Priority AI analysis
-• Smart folder organization
-• Full export options
-• No ads, ever
+- Unlimited transcriptions
+- Up to 60-minute recordings
+- Priority AI analysis
+- Smart folder organization
+- Full export options
+- No ads, ever
 
-Plans: Monthly ($3.99/mo), Annual ($24.99/yr — save 48%), or Lifetime ($29.99 one-time).
+Plans: Monthly ($3.99/mo), Annual ($24.99/yr), or Lifetime ($29.99 one-time).
 Annual plan includes a 7-day free trial.
 
-── PRIVACY ──
+PRIVACY
 
-• Speech recognition runs entirely on your device — no audio is sent to external servers
-• Summaries are generated via encrypted API with no data retention
-• Your recordings are stored only on your device
+- Speech recognition runs entirely on your device - no audio is sent to external servers
+- Summaries are generated via encrypted API with no data retention
+- Your recordings are stored only on your device
 
-VoxNote — your voice, turned into knowledge.
+VoxNote - your voice, turned into knowledge.
