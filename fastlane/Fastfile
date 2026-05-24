@@ -52,8 +52,8 @@ platform :ios do
       },
       primary_category:         "UTILITIES",
       secondary_category:       "PRODUCTIVITY",
-      privacy_url:              "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html",
-      support_url:              "https://github.com/Koki-coder-crypto/LynQ_backend/issues",
+      privacy_url:              {"default" => "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"},
+      support_url:              {"default" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
       price_tier:               0,
       submission_information:   {
         export_compliance_uses_encryption:            false,
@@ -104,8 +104,8 @@ platform :ios do
       },
       primary_category:      "UTILITIES",
       secondary_category:    "PRODUCTIVITY",
-      privacy_url:           "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html",
-      support_url:           "https://github.com/Koki-coder-crypto/LynQ_backend/issues",
+      privacy_url:           {"default" => "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"},
+      support_url:           {"default" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
       submission_information: {
         export_compliance_uses_encryption:           false,
         export_compliance_is_exempt:                 true,
