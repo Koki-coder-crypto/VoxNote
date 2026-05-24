@@ -56,6 +56,10 @@ platform :ios do
       support_url:              {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
       price_tier:               0,
       app_review_information: {
+        first_name:    "Koki",
+        last_name:     "Egawa",
+        phone_number:  "+818036733422",
+        email_address: "kouki_1203@icloud.com",
         demo_user:     nil,
         demo_password: nil,
         notes:         "No login required. AI voice transcription - requires microphone permission to record audio."
@@ -113,6 +117,10 @@ platform :ios do
       privacy_url:           {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"},
       support_url:           {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
       app_review_information: {
+        first_name:    "Koki",
+        last_name:     "Egawa",
+        phone_number:  "+818036733422",
+        email_address: "kouki_1203@icloud.com",
         demo_user:     nil,
         demo_password: nil,
         notes:         "No login required. AI voice transcription - requires microphone permission to record audio."
