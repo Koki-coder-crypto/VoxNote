@@ -39,16 +39,16 @@ platform :ios do
       app_identifier:           "com.kokicoder.voxnote",
       name:                     "VoxNote - AI Voice Transcription",
       description:              {
-        "en-US" => File.read("app_store/description_en.txt"),
-        "ja"    => File.read("app_store/description_ja.txt")
+        "en-US" => File.read("../app_store/description_en.txt"),
+        "ja"    => File.read("../app_store/description_ja.txt")
       },
       keywords:                 {
         "en-US" => "voice memo,transcription,voice recorder,ai notes,speech to text,meeting notes,dictation,audio recorder",
         "ja"    => "音声メモ,文字起こし,ボイスレコーダー,AIノート,議事録,授業録音,音声認識,ディクテーション"
       },
       release_notes:            {
-        "en-US" => File.read("app_store/whats_new_en.txt"),
-        "ja"    => File.read("app_store/whats_new_ja.txt")
+        "en-US" => File.read("../app_store/whats_new_en.txt"),
+        "ja"    => File.read("../app_store/whats_new_ja.txt")
       },
       primary_category:         "UTILITIES",
       secondary_category:       "PRODUCTIVITY",
@@ -76,11 +76,10 @@ platform :ios do
     UI.success("VoxNote submitted for App Store review!")
   end
 
-  desc "Submit existing TestFlight build for review (no rebuild, key from ~/.appstoreconnect/private_keys/)"
+  desc "Submit existing TestFlight build for review (no rebuild)"
   lane :submit_review_only do
     setup_ci if ENV["CI"]
 
-    # Key file must be at $HOME/.appstoreconnect/private_keys/AuthKey_{key_id}.p8
     api_key = app_store_connect_api_key(
       key_id:      ENV["ASC_KEY_ID"],
       issuer_id:   ENV["ASC_ISSUER_ID"],
@@ -92,16 +91,16 @@ platform :ios do
       app_identifier:        "com.kokicoder.voxnote",
       name:                  "VoxNote - AI Voice Transcription",
       description: {
-        "en-US" => File.read("app_store/description_en.txt"),
-        "ja"    => File.read("app_store/description_ja.txt")
+        "en-US" => File.read("../app_store/description_en.txt"),
+        "ja"    => File.read("../app_store/description_ja.txt")
       },
       keywords: {
         "en-US" => "voice memo,transcription,voice recorder,ai notes,speech to text,meeting notes,dictation,audio recorder",
         "ja"    => "音声メモ,文字起こし,ボイスレコーダー,AIノート,議事録,授業録音,音声認識,ディクテーション"
       },
       release_notes: {
-        "en-US" => (ENV["RELEASE_NOTES"] || File.read("app_store/whats_new_en.txt")),
-        "ja"    => File.read("app_store/whats_new_ja.txt")
+        "en-US" => (ENV["RELEASE_NOTES"] || File.read("../app_store/whats_new_en.txt")),
+        "ja"    => File.read("../app_store/whats_new_ja.txt")
       },
       primary_category:      "UTILITIES",
       secondary_category:    "PRODUCTIVITY",
