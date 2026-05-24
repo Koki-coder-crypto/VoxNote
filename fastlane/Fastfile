@@ -139,7 +139,9 @@ platform :ios do
       run_precheck_before_submit: false,
       submit_for_review:  true,
       automatic_release:  false,
-      skip_screenshots:   true,
+      screenshots_path:   File.join(File.dirname(__FILE__), "screenshots"),
+      overwrite_screenshots: true,
+      skip_screenshots:   false,
       skip_binary_upload: true,
       skip_metadata:      false,
       force:              true
