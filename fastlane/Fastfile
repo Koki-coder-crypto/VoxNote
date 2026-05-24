@@ -55,7 +55,7 @@ platform :ios do
       privacy_url:              {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"},
       support_url:              {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
       price_tier:               0,
-      review_information: {
+      app_review_information: {
         demo_user:     nil,
         demo_password: nil,
         notes:         "No login required. AI voice transcription - requires microphone permission to record audio."
@@ -111,7 +111,7 @@ platform :ios do
       secondary_category:    "PRODUCTIVITY",
       privacy_url:           {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"},
       support_url:           {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
-      review_information: {
+      app_review_information: {
         demo_user:     nil,
         demo_password: nil,
         notes:         "No login required. AI voice transcription - requires microphone permission to record audio."
