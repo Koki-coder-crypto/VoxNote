@@ -76,6 +76,59 @@ platform :ios do
     UI.success("VoxNote submitted for App Store review!")
   end
 
+  desc "Submit existing TestFlight build for review (no rebuild)"
+  lane :submit_review_only do
+    setup_ci if ENV["CI"]
+
+    api_key = app_store_connect_api_key(
+      key_id:       ENV["ASC_KEY_ID"],
+      issuer_id:    ENV["ASC_ISSUER_ID"],
+      key_content:  ENV["ASC_PRIVATE_KEY"],
+      is_key_content_base64: false
+    )
+
+    deliver(
+      api_key:               api_key,
+      app_identifier:        "com.kokicoder.voxnote",
+      name:                  "VoxNote - AI Voice Transcription",
+      description: {
+        "en-US" => File.read("app_store/description_en.txt"),
+        "ja"    => File.read("app_store/description_ja.txt")
+      },
+      keywords: {
+        "en-US" => "voice memo,transcription,voice recorder,ai notes,speech to text,meeting notes,dictation,audio recorder",
+        "ja"    => "音声メモ,文字起こし,ボイスレコーダー,AIノート,議事録,授業録音,音声認識,ディクテーション"
+      },
+      release_notes: {
+        "en-US" => (ENV["RELEASE_NOTES"] || File.read("app_store/whats_new_en.txt")),
+        "ja"    => File.read("app_store/whats_new_ja.txt")
+      },
+      primary_category:      "UTILITIES",
+      secondary_category:    "PRODUCTIVITY",
+      privacy_url:           "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html",
+      support_url:           "https://github.com/Koki-coder-crypto/LynQ_backend/issues",
+      submission_information: {
+        export_compliance_uses_encryption:           false,
+        export_compliance_is_exempt:                 true,
+        add_id_info_uses_idfa:                       false,
+        add_id_info_serves_ads:                      false,
+        add_id_info_tracks_action:                   false,
+        add_id_info_tracks_install:                  false,
+        add_id_info_limits_tracking:                 true,
+        content_rights_has_rights:                   true,
+        content_rights_contains_third_party_content: false
+      },
+      submit_for_review:  true,
+      automatic_release:  false,
+      skip_screenshots:   true,
+      skip_binary_upload: true,
+      skip_metadata:      false,
+      force:              true
+    )
+
+    UI.success("VoxNote submitted for App Store review!")
+  end
+
   desc "Build only (no upload)"
   lane :build_only do
     sh("xcodegen generate --spec ../project.yml")
