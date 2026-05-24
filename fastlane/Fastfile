@@ -76,15 +76,15 @@ platform :ios do
     UI.success("VoxNote submitted for App Store review!")
   end
 
-  desc "Submit existing TestFlight build for review (no rebuild)"
+  desc "Submit existing TestFlight build for review (no rebuild, key from ~/.appstoreconnect/private_keys/)"
   lane :submit_review_only do
     setup_ci if ENV["CI"]
 
+    # Key file must be at $HOME/.appstoreconnect/private_keys/AuthKey_{key_id}.p8
     api_key = app_store_connect_api_key(
-      key_id:       ENV["ASC_KEY_ID"],
-      issuer_id:    ENV["ASC_ISSUER_ID"],
-      key_content:  ENV["ASC_PRIVATE_KEY"],
-      is_key_content_base64: false
+      key_id:      ENV["ASC_KEY_ID"],
+      issuer_id:   ENV["ASC_ISSUER_ID"],
+      key_filepath: File.join(Dir.home, ".appstoreconnect/private_keys/AuthKey_#{ENV["ASC_KEY_ID"]}.p8")
     )
 
     deliver(
