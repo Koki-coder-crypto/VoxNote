@@ -33,9 +33,9 @@ struct SettingsView: View {
 
                 Section("About") {
                     LabeledContent("Version", value: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
-                    Link("Privacy Policy", destination: URL(string: "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html")!)
-                    Link("Terms of Service", destination: URL(string: "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/terms_of_service.html")!)
-                    Link("Support", destination: URL(string: "https://github.com/Koki-coder-crypto/LynQ_backend/issues")!)
+                    Link("Privacy Policy", destination: URL(string: "https://koki-coder-crypto.github.io/VoxNote/privacy.html")!)
+                    Link("Terms of Service", destination: URL(string: "https://koki-coder-crypto.github.io/VoxNote/terms.html")!)
+                    Link("Support", destination: URL(string: "https://koki-coder-crypto.github.io/VoxNote/support.html")!)
                 }
 
                 Section {

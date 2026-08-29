@@ -83,7 +83,7 @@ struct PaywallView: View {
     private let features: [(icon: String, color: Color, title: String, detail: String)] = [
         ("infinity",              Color(hex: "A78BFA"), "Unlimited transcriptions",  "No monthly limits"),
         ("clock.fill",            Color(hex: "60A5FA"), "60-min recordings",         "vs. 5 min on free"),
-        ("sparkles",              Color(hex: "F59E0B"), "AI summary & key points",   "Smart memo generation"),
+        ("text.quote",            Color(hex: "F59E0B"), "Private memo highlights",   "Generated on your device"),
         ("folder.fill",           Color(hex: "2ECC71"), "Smart organization",        "Auto folders & search"),
         ("square.and.arrow.up",   Color(hex: "38BDF8"), "Export to PDF & Notes",     "Share anywhere"),
         ("nosign",                Color(hex: "E74C3C"), "Zero ads",                  "Clean, focused"),
@@ -128,14 +128,6 @@ struct PaywallView: View {
                     withAnimation(.spring(response: 0.3)) { selectedPlan = p.id }
                 }
             }
-            if let p = store.lifetime {
-                VoxPlanCard(title: "Lifetime", displayPrice: p.displayPrice, period: "one-time",
-                            badge: "Pay Once, Keep Forever", badgeColor: Color(hex: "F59E0B"),
-                            trialNote: nil, selected: selectedPlan == p.id) {
-                    Haptics.selection()
-                    withAnimation(.spring(response: 0.3)) { selectedPlan = p.id }
-                }
-            }
         }
     }
 
@@ -168,12 +160,12 @@ struct PaywallView: View {
 
     private var legalSection: some View {
         VStack(spacing: 8) {
-            Text("Subscriptions auto-renew. Cancel anytime in Apple ID settings.")
+            Text("The annual plan includes a 7-day free trial, then renews at the price Apple shows before purchase. Cancel anytime in Apple ID settings.")
                 .font(.system(size: 11)).foregroundStyle(Color.appMuted.opacity(0.5))
                 .multilineTextAlignment(.center).padding(.horizontal, 40)
             HStack(spacing: 20) {
-                Link("Privacy Policy", destination: URL(string: "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html")!)
-                Link("Terms of Use",   destination: URL(string: "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/terms_of_service.html")!)
+                Link("Privacy Policy", destination: URL(string: "https://koki-coder-crypto.github.io/VoxNote/privacy.html")!)
+                Link("Terms of Use",   destination: URL(string: "https://koki-coder-crypto.github.io/VoxNote/terms.html")!)
             }
             .font(.system(size: 12, weight: .medium)).foregroundStyle(Color.appAccent.opacity(0.65))
         }

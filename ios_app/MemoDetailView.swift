@@ -86,7 +86,7 @@ struct MemoDetailView: View {
     @ViewBuilder
     private var summarySection: some View {
         if let summary = memo.summary, !summary.isEmpty {
-            InfoCard(title: "AI Summary", icon: "sparkles", color: .purple) {
+            InfoCard(title: "Memo overview", icon: "text.quote", color: .purple) {
                 Text(summary)
                     .font(.body)
                     .foregroundStyle(.primary)

@@ -8,8 +8,7 @@ class StoreManager: ObservableObject {
 
     private let productIDs = [
         "com.kokicoder.voxnote.pro.monthly",
-        "com.kokicoder.voxnote.pro.annual",
-        "com.kokicoder.voxnote.lifetime"
+        "com.kokicoder.voxnote.pro.annual"
     ]
 
     static let freeTranscriptionsPerMonth = 10
@@ -33,6 +32,10 @@ class StoreManager: ObservableObject {
         if case .success(let verification) = result,
            case .verified(let tx) = verification {
             await handle(tx)
+        } else if case .userCancelled = result {
+            return
+        } else {
+            throw StoreError.unverifiedPurchase
         }
     }
 
@@ -42,20 +45,28 @@ class StoreManager: ObservableObject {
     }
 
     private func updatePurchasedStatus() async {
+        var hasActiveEntitlement = false
         for await result in Transaction.currentEntitlements {
-            if case .verified(let tx) = result { await handle(tx) }
+            guard case .verified(let tx) = result,
+                  tx.revocationDate == nil,
+                  (tx.expirationDate ?? .distantFuture) > .now else { continue }
+            hasActiveEntitlement = true
         }
+        isPro = hasActiveEntitlement
     }
 
     private func handle(_ transaction: Transaction) async {
-        if transaction.revocationDate == nil {
-            isPro = true
-        }
         await transaction.finish()
+        await updatePurchasedStatus()
     }
 
     var proMonthly: Product? { products.first { $0.id.contains("monthly") } }
     var proAnnual:  Product? { products.first { $0.id.contains("annual") } }
-    var lifetime:   Product? { products.first { $0.id.contains("lifetime") } }
+}
+
+enum StoreError: LocalizedError {
+    case unverifiedPurchase
+
+    var errorDescription: String? { "The purchase could not be verified. Please try again." }
 }
 

@@ -1,6 +1,6 @@
-VoxNote turns your voice into structured, intelligent notes instantly.
+VoxNote turns a recording into a private, structured memo.
 
-Whether it's a meeting, a lecture, an idea at 2am, or a quick reminder, VoxNote records, transcribes, and summarizes everything automatically using on-device speech recognition and AI.
+Whether it is a meeting, lecture, idea, or reminder, VoxNote records, transcribes, and creates a memo overview on your device.
 
 WHAT VOXNOTE DOES
 
@@ -10,11 +10,8 @@ Tap once to record. Pause, resume, or cancel at any time. No limits on the numbe
 TRANSCRIBE
 Powered by Apple's on-device speech recognition engine, VoxNote converts your audio to accurate text - no audio ever leaves your device.
 
-AI SUMMARY
-After every recording, AI automatically generates:
-- A clear, concise summary
-- Key points extracted from the conversation
-- Action items ready to act on
+MEMO OVERVIEW
+After a recording, VoxNote organizes a short overview, key points, and next actions for your review.
 
 ORGANIZE
 Browse all your memos with search. Every memo includes the original audio so you can replay it anytime.
@@ -27,20 +24,17 @@ VOXNOTE PRO
 Free plan: 10 transcriptions/month, up to 5 minutes per recording.
 
 Upgrade to Pro for:
-- Unlimited transcriptions
-- Up to 60-minute recordings
-- Priority AI analysis
-- Smart folder organization
+- More transcriptions when you need them
+- Longer recordings
+- Memo organization
 - Full export options
 - No ads, ever
 
-Plans: Monthly ($3.99/mo), Annual ($24.99/yr), or Lifetime ($29.99 one-time).
-Annual plan includes a 7-day free trial.
+Plans: Monthly ($4.99/mo) or Annual ($34.99/yr). Prices vary by storefront. The annual plan includes a 7-day free trial where offered; the monthly plan starts immediately. Your Apple ID is charged after the trial unless you cancel at least 24 hours before it ends.
 
 PRIVACY
 
 - Speech recognition runs entirely on your device - no audio is sent to external servers
-- Summaries are generated via encrypted API with no data retention
 - Your recordings are stored only on your device
 
 VoxNote - your voice, turned into knowledge.

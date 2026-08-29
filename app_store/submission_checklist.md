@@ -1,4 +1,6 @@
-# VoxNote — App Store Submission Checklist
+# VoxNote — Legacy Submission Checklist
+
+> Superseded by `release_plan_2026.md`. Do not create the lifetime product, use the old Bundle ID, or configure an external AI key from this document.
 
 ## App Store Connect Setup
 

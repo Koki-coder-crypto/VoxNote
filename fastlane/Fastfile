@@ -22,7 +22,7 @@ platform :ios do
       output_directory:    "./build",
       output_name:         "VoxNote.ipa",
       export_method:       "app-store",
-      xcargs:              "DEVELOPMENT_TEAM=#{ENV["DEVELOPMENT_TEAM"]} ANTHROPIC_API_KEY=#{ENV["ANTHROPIC_API_KEY"]}",
+      xcargs:              "DEVELOPMENT_TEAM=#{ENV["DEVELOPMENT_TEAM"]}",
       clean:               true
     )
 
@@ -37,14 +37,14 @@ platform :ios do
       api_key:                  api_key,
       ipa:                      "./build/VoxNote.ipa",
       app_identifier:           "com.kokicoder.voxnote",
-      name:                     {"en-US" => "VoxNote - AI Voice Transcription", "ja" => "VoxNote - AI音声文字起こし"},
+      name:                     {"en-US" => "VoxNote", "ja" => "VoxNote"},
       description:              {
         "en-US" => File.read("../app_store/description_en.txt"),
         "ja"    => File.read("../app_store/description_ja.txt")
       },
       keywords:                 {
-        "en-US" => "voice memo,transcription,voice recorder,ai notes,speech to text,meeting notes,dictation,audio recorder",
-        "ja"    => "音声メモ,文字起こし,ボイスレコーダー,AIノート,議事録,授業録音,音声認識,ディクテーション"
+        "en-US" => "voice memo,transcription,recorder,meeting notes,speech,text",
+        "ja"    => "音声メモ,文字起こし,録音,議事録,音声認識,ボイスレコーダー"
       },
       release_notes:            {
         "en-US" => File.read("../app_store/whats_new_en.txt"),
@@ -52,8 +52,8 @@ platform :ios do
       },
       primary_category:         "UTILITIES",
       secondary_category:       "PRODUCTIVITY",
-      privacy_url:              {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"},
-      support_url:              {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
+      privacy_url:              {"default" => "https://koki-coder-crypto.github.io/VoxNote/privacy.html"},
+      support_url:              {"default" => "https://koki-coder-crypto.github.io/VoxNote/support.html"},
       price_tier:               0,
       app_review_information: {
         first_name:    "Koki",
@@ -62,7 +62,7 @@ platform :ios do
         email_address: "kouki_1203@icloud.com",
         demo_user:     nil,
         demo_password: nil,
-        notes:         "No login required. AI voice transcription - requires microphone permission to record audio."
+        notes:         "No login required. VoxNote records audio and uses on-device speech recognition. Microphone and speech permissions are requested only when the reviewer starts recording or transcription."
       },
       submission_information:   {
         export_compliance_uses_encryption:            false,
@@ -99,14 +99,14 @@ platform :ios do
     deliver(
       api_key:               api_key,
       app_identifier:        "com.kokicoder.voxnote",
-      name:                  {"en-US" => "VoxNote - AI Voice Transcription", "ja" => "VoxNote - AI音声文字起こし"},
+      name:                  {"en-US" => "VoxNote", "ja" => "VoxNote"},
       description: {
         "en-US" => File.read("../app_store/description_en.txt"),
         "ja"    => File.read("../app_store/description_ja.txt")
       },
       keywords: {
-        "en-US" => "voice memo,transcription,voice recorder,ai notes,speech to text,meeting notes,dictation,audio recorder",
-        "ja"    => "音声メモ,文字起こし,ボイスレコーダー,AIノート,議事録,授業録音,音声認識,ディクテーション"
+        "en-US" => "voice memo,transcription,recorder,meeting notes,speech,text",
+        "ja"    => "音声メモ,文字起こし,録音,議事録,音声認識,ボイスレコーダー"
       },
       release_notes: {
         "en-US" => (ENV["RELEASE_NOTES"] || File.read("../app_store/whats_new_en.txt")),
@@ -114,8 +114,8 @@ platform :ios do
       },
       primary_category:      "UTILITIES",
       secondary_category:    "PRODUCTIVITY",
-      privacy_url:           {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"},
-      support_url:           {"en-US" => "https://github.com/Koki-coder-crypto/LynQ_backend/issues"},
+      privacy_url:           {"default" => "https://koki-coder-crypto.github.io/VoxNote/privacy.html"},
+      support_url:           {"default" => "https://koki-coder-crypto.github.io/VoxNote/support.html"},
       app_review_information: {
         first_name:    "Koki",
         last_name:     "Egawa",
@@ -123,7 +123,7 @@ platform :ios do
         email_address: "kouki_1203@icloud.com",
         demo_user:     nil,
         demo_password: nil,
-        notes:         "No login required. AI voice transcription - requires microphone permission to record audio."
+        notes:         "No login required. VoxNote records audio and uses on-device speech recognition. Microphone and speech permissions are requested only when the reviewer starts recording or transcription."
       },
       submission_information: {
         export_compliance_uses_encryption:           false,
@@ -160,7 +160,7 @@ platform :ios do
       output_directory: "./build",
       output_name:      "VoxNote.ipa",
       export_method:    "app-store",
-      xcargs:           "DEVELOPMENT_TEAM=#{ENV["DEVELOPMENT_TEAM"]} ANTHROPIC_API_KEY=#{ENV["ANTHROPIC_API_KEY"]}",
+      xcargs:           "DEVELOPMENT_TEAM=#{ENV["DEVELOPMENT_TEAM"]}",
       clean: true
     )
   end

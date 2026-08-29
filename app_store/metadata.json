@@ -1,7 +1,7 @@
 {
   "app_info": {
-    "name": "VoxNote - AI Voice Transcription",
-    "subtitle": "Record. Transcribe. Summarize.",
+    "name": "VoxNote",
+    "subtitle": "Record and transcribe privately",
     "bundle_id": "com.kokicoder.voxnote",
     "sku": "VOXNOTE001",
     "primary_language": "en-US",
@@ -33,10 +33,10 @@
     "copyright": "2026 Koki. All rights reserved."
   },
   "app_store_info": {
-    "promotional_text": "Turn any meeting, lecture, or idea into structured notes in seconds — powered by AI. 🎙️",
-    "support_url": "https://github.com/Koki-coder-crypto/LynQ_backend/issues",
-    "marketing_url": "https://github.com/Koki-coder-crypto/LynQ_backend",
-    "privacy_policy_url": "https://github.com/Koki-coder-crypto/LynQ_backend/blob/master/app_store/privacy_policy.html"
+    "promotional_text": "Record, transcribe, and review meeting notes with on-device processing.",
+    "support_url": "https://koki-coder-crypto.github.io/VoxNote/support.html",
+    "marketing_url": "https://github.com/Koki-coder-crypto/VoxNote",
+    "privacy_policy_url": "https://koki-coder-crypto.github.io/VoxNote/privacy.html"
   },
   "review_info": {
     "first_name": "Koki",
@@ -48,16 +48,16 @@
   },
   "localizations": {
     "en-US": {
-      "name": "VoxNote - AI Voice Transcription",
-      "subtitle": "Record. Transcribe. Summarize.",
-      "keywords": "voice memo,transcription,voice recorder,ai notes,speech to text,meeting notes,dictation,audio recorder",
+      "name": "VoxNote",
+      "subtitle": "Record and transcribe privately",
+      "keywords": "voice memo,transcription,recorder,meeting notes,speech,text",
       "description_file": "description_en.txt",
       "whats_new_file": "whats_new_en.txt"
     },
     "ja": {
-      "name": "VoxNote - AI音声文字起こし",
-      "subtitle": "録音・文字起こし・AI要約",
-      "keywords": "音声メモ,文字起こし,ボイスレコーダー,AIノート,議事録,授業録音,音声認識,ディクテーション",
+      "name": "VoxNote",
+      "subtitle": "録音・文字起こし・メモ整理",
+      "keywords": "音声メモ,文字起こし,録音,議事録,音声認識,ボイスレコーダー",
       "description_file": "description_ja.txt",
       "whats_new_file": "whats_new_ja.txt"
     }
@@ -67,42 +67,30 @@
       "product_id": "com.kokicoder.voxnote.pro.monthly",
       "type": "auto_renewable_subscription",
       "reference_name": "VoxNote Pro Monthly",
-      "price_tier": "Tier 4",
-      "price_usd": 3.99,
-      "price_jpy": 600,
+      "price_tier": "Tier 5",
+      "price_usd": 4.99,
+      "price_jpy": 700,
       "subscription_group": "VoxNote Pro",
       "subscription_duration": "1 Month",
-      "free_trial": "3 Days",
+      "free_trial": null,
       "localizations": {
-        "en-US": { "display_name": "VoxNote Pro Monthly", "description": "Unlimited transcriptions and AI summaries, billed monthly." },
-        "ja":    { "display_name": "VoxNote Pro 月額プラン", "description": "無制限の文字起こしとAI要約。月額課金。" }
+        "en-US": { "display_name": "VoxNote Pro Monthly", "description": "More recordings and transcriptions, billed monthly." },
+        "ja":    { "display_name": "VoxNote Pro 月額プラン", "description": "録音と文字起こしをより多く使える月額プラン。" }
       }
     },
     {
       "product_id": "com.kokicoder.voxnote.pro.annual",
       "type": "auto_renewable_subscription",
       "reference_name": "VoxNote Pro Annual",
-      "price_tier": "Tier 13",
-      "price_usd": 24.99,
-      "price_jpy": 3600,
+      "price_tier": "Tier 15",
+      "price_usd": 34.99,
+      "price_jpy": 4900,
       "subscription_group": "VoxNote Pro",
       "subscription_duration": "1 Year",
       "free_trial": "7 Days",
       "localizations": {
-        "en-US": { "display_name": "VoxNote Pro Annual", "description": "Unlimited transcriptions and AI summaries — save 48% vs. monthly." },
-        "ja":    { "display_name": "VoxNote Pro 年額プラン", "description": "無制限の文字起こしとAI要約。月額より48%お得。" }
-      }
-    },
-    {
-      "product_id": "com.kokicoder.voxnote.lifetime",
-      "type": "non_consumable",
-      "reference_name": "VoxNote Lifetime",
-      "price_tier": "Tier 20",
-      "price_usd": 29.99,
-      "price_jpy": 4500,
-      "localizations": {
-        "en-US": { "display_name": "VoxNote Lifetime", "description": "Pay once and unlock VoxNote Pro forever — no recurring fees." },
-        "ja":    { "display_name": "VoxNote 買い切りプラン", "description": "一度の購入でVoxNote Proを永久に利用できます。" }
+        "en-US": { "display_name": "VoxNote Pro Annual", "description": "More recordings and transcriptions. Includes a 7-day trial where offered." },
+        "ja":    { "display_name": "VoxNote Pro 年額プラン", "description": "録音と文字起こしをより多く使える年額プラン。7日間トライアル対象。" }
       }
     }
   ],
