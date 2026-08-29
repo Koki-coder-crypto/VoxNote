@@ -34,7 +34,7 @@ jobs:
       - name: Generate and archive
         run: |
           xcodegen generate --spec project.yml
-          xcodebuild archive -project VoxNote.xcodeproj -scheme VoxNote -configuration Release -archivePath "$RUNNER_TEMP/VoxNote.xcarchive" CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}" PROVISIONING_PROFILE_SPECIFIER="VoxNote AppStore CI" CURRENT_PROJECT_VERSION="$((GITHUB_RUN_NUMBER + 1))"
+          xcodebuild archive -project VoxNote.xcodeproj -scheme VoxNote -configuration Release -archivePath "$RUNNER_TEMP/VoxNote.xcarchive" CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY="Apple Distribution" DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}" PROVISIONING_PROFILE_SPECIFIER="VoxNote AppStore CI" CURRENT_PROJECT_VERSION="$((GITHUB_RUN_NUMBER + 1))"
           xcodebuild -exportArchive -archivePath "$RUNNER_TEMP/VoxNote.xcarchive" -exportOptionsPlist ci/ExportOptions.plist -exportPath "$RUNNER_TEMP/export"
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
